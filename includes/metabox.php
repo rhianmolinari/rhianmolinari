@@ -20,9 +20,9 @@ function rw_register_meta_boxes() {
 
 	// 1st meta box (CLIENT)
 	$meta_boxes[] = array(
-		'id' => 'description_of_project', // $id
-		'title' => 'Description of project', // $title
-		'pages' => array( 'project' ), // $post_type
+		'id' => 'descricao_do_projeto', // $id
+		'title' => 'Descri&ccedil;&aacute;o do projeto', // $title
+		'pages' => array( 'projeto' ), // $post_type
 		'context' => 'side', // $context
 		'priority' => 'low', // $priority
 		'autosave' => false, // true, false (default).
@@ -30,7 +30,7 @@ function rw_register_meta_boxes() {
 		'fields' => array(
 			// TEXT
 			array(
-				'name' => 'Client Name',
+				'name' => 'Nome do cliente',
 				'id' => $prefix. 'client_name',
 				'type' => 'text',
 			),
@@ -47,7 +47,7 @@ function rw_register_meta_boxes() {
 	// 2nd meta box (SLIDE IMAGE)
 	$meta_boxes[] = array(
 		'title' => 'Slide',
-		'pages' => array( 'project' ),
+		'pages' => array( 'projeto' ),
 		'context' => 'normal', // $context
 		'priority' => 'low', // $priority
 		'autosave' => false, // true, false (default).
@@ -85,7 +85,7 @@ function rw_register_meta_boxes() {
 
 	// 4nd meta box (SLIDE FEATURED)
 	$meta_boxes[] = array(
-		'title' => 'Project in slide',
+		'title' => 'Projeto no slide',
 		'pages' => array( 'slide' ),
 		'context' => 'normal', // $context
 		'priority' => 'default', // $priority
@@ -94,13 +94,13 @@ function rw_register_meta_boxes() {
 		'fields' => array(
 			// POST
 			array(
-				'name' => 'Project',
+				'name' => 'Projeto',
 				'id' => $prefix. 'slide_project',
-				'desc' => 'Select the project of featured',
+				'desc' => 'Selecione o projeto de destaque',
 				'type' => 'post',
 
 				// Post type
-				'post_type' => 'project',
+				'post_type' => 'projeto',
 				// Field type, either 'select' or 'select_advanced' (default)
 				'field_type' => 'select_advanced',
 				// Query arguments (optional). No settings means get all published posts

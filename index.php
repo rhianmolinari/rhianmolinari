@@ -49,7 +49,7 @@ get_header(); ?>
 		</hgroup>
 		<ul class="row project">
 			<?php query_posts(array(
-				'post_type' => 'project',
+				'post_type' => 'projeto',
 				'post_status' => 'publish',
 				'posts_per_page' => '-1',
 				'orderby'=>'date',
@@ -80,7 +80,7 @@ get_header(); ?>
 			</li>
 			<li class="span3">
 				<h4>Escopo</h4>
-				<p>Agora &eacute; hora de fazer a conceitua&ccedil;&aacute;o do projeto, filtrar os dados levantados e gerar os escopos.</p>
+				<p>Agora &eacute; hora de fazer a conceitua&ccedil;&atilde;o do projeto, filtrar os dados levantados e gerar os escopos.</p>
 				<ul class="trace">
 					<li>Funcionalidades</li>
 					<li>Arquitetura de informa&ccedil;&atilde;o</li>

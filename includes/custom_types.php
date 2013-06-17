@@ -3,25 +3,25 @@
 // Custom Post Type
 function rhianmolinari_projects() {
 	$labels = array(
-		'name' => 'Projects',
-		'singular_name' => 'Project',
-		'add_new' => 'Add new Project',
-		'add_new_item' => 'Add new Project',
-		'edit_item' =>'Edit Project',
-		'new_item' => 'New Project',
-		'view_item' => 'View Project',
-		'search_items' => 'Search Projects',
-		'not_found' => 'No project found',
-		'not_found_in_trash' => 'No project found in Trash',
-		'parent_item_colon' => 'Parent Project:',
-		'menu_name' => 'Projects'
+		'name' => 'Projetos',
+		'singular_name' => 'Projeto',
+		'add_new' => 'Adicionar novo Projeto',
+		'add_new_item' => 'Adicionar novo Projeto',
+		'edit_item' =>'Editar Projeto',
+		'new_item' => 'Novo Projeto',
+		'view_item' => 'Visualizar Projeto',
+		'search_items' => 'Buscar Projetos',
+		'not_found' => 'Projeto n&atilde;o encontrado',
+		'not_found_in_trash' => 'Projeto n&atilde;o encontrado no Lixo',
+		'parent_item_colon' => 'Projeto Parente:',
+		'menu_name' => 'Projetos'
 	);
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
 		'description' => 'Portfolio Rhian Molinari',
 		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
-		'taxonomies' => array( 'project_type' ),
+		'taxonomies' => array( 'tipo_projeto' ),
 		'public' => true,
 		'show_ui' => true,
 		'show_in_menu' => true,
@@ -36,20 +36,20 @@ function rhianmolinari_projects() {
 		'capability_type' => 'post'
 	);
 
-	register_post_type( 'project', $args );
+	register_post_type( 'projeto', $args );
 }
 add_action( 'init', 'rhianmolinari_projects' );
 
 // Custom Icon Post Type
 function rhianmolinari_projects_icon() { ?>
 <style type="text/css" media="screen">
-	#menu-posts-project .wp-menu-image {
+	#menu-posts-projeto .wp-menu-image {
 		background: url(<?php bloginfo('template_url') ?>/img/custom_types_icon.png) no-repeat -30px -2px !important;
 	}
-	#menu-posts-project:hover .wp-menu-image, #menu-posts-project.wp-has-current-submenu .wp-menu-image {
+	#menu-posts-projeto:hover .wp-menu-image, #menu-posts-projeto.wp-has-current-submenu .wp-menu-image {
 		background-position: -51px -2px !important;
 	}
-	#icon-edit.icon32-posts-project {
+	#icon-edit.icon32-posts-projeto {
 		background: url(<?php bloginfo('template_url') ?>/img/custom_types_icon.png) no-repeat 6px 4px;
 	}
 </style>
@@ -59,17 +59,17 @@ add_action( 'admin_head', 'rhianmolinari_projects_icon' );
 // Taxonomies
 function rhianmolinari_projects_taxonomies() {
 	$labels = array(
-		'name' => 'Project Type',
-		'singular_name' => 'Project Type',
-		'search_items' => 'Search Project Type',
-		'all_items' => 'All Project Type',
-		'parent_item' => 'Parent Project Type',
-		'parent_item_colon' => 'Parent Project Type:',
-		'edit_item' => 'Edit Project Type',
-		'update_item' => 'Update Project Type',
-		'add_new_item' => 'Add New Project Type',
-		'new_item_name' => 'New Project Type Name',
-		'menu_name' => 'Project Type'
+		'name' => 'Tipo de Projeto',
+		'singular_name' => 'Tipo de Projeto',
+		'search_items' => 'Busca por Tipo de Projeto',
+		'all_items' => 'Todos os Tipos de Projeto',
+		'parent_item' => 'Tipo de Projeto Parente',
+		'parent_item_colon' => 'Tipo de Projeto Parente:',
+		'edit_item' => 'Editar Tipo de Projeto',
+		'update_item' => 'Atualizar Tipo de Projeto',
+		'add_new_item' => 'Adicionar Novo Tipo de Projeto',
+		'new_item_name' => 'Novo Nome Tipo de Projeto',
+		'menu_name' => 'Tipo de Projeto'
 	);
 	$args = array(
 		'hierarchical' => true,
@@ -77,10 +77,10 @@ function rhianmolinari_projects_taxonomies() {
 		'show_ui' => true,
 		'show_admin_column' => true,
 		'query_var' => true,
-		'rewrite' => array(	'slug' => 'project' )
+		'rewrite' => array(	'slug' => 'projeto' )
 	);
 
-	register_taxonomy( 'project_type', 'project', $args );
+	register_taxonomy( 'tipo_projeto', 'projeto', $args );
 }
 add_action( 'init', 'rhianmolinari_projects_taxonomies', 0 );
 
