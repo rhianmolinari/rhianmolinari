@@ -1,0 +1,62 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Body reset
+// -------------------------
+
+body {
+	margin: 0;
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @gray3;
+	background-color: @grayFA;
+}
+
+
+// Links
+// -------------------------
+
+// Part in custom.less text underline dotted
+a {
+	color: @linkColor;
+}
+a:hover,
+a:focus {
+	color: @linkColorHover;
+}
+
+a,
+a:hover,
+a:focus,
+a:active{
+	text-decoration: none;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+	.border-radius(2px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+	padding: 4px;
+	.box-sizing(border-box);
+	background-color: @white;
+	border: 1px solid @grayC;
+	border: 1px solid rgba(0,0,0,.2);
+	.box-shadow(0 1px 3px rgba(0,0,0,.1));
+}
+
+// Perfect circle
+// Class avatar custom my theme
+.img-circle,
+.avatar {
+	.border-radius(100%); // crank the border-radius so it works with most reasonably sized images
+}

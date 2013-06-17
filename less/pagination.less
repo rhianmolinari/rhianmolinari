@@ -1,0 +1,107 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+
+
+// Space out pagination from surrounding content
+.pagination {
+	margin-bottom: @baseLineHeight - 10;
+	ul {
+		// Allow for text-based alignment
+		display: inline-block;
+		.ie7-inline-block();
+		// Reset default ul styles
+		margin-left: 0;
+		margin-bottom: 0;
+		// Visuals
+		.border-radius(2px);
+		> li {
+			display: inline; // Remove list-style and block-level defaults
+			> a,
+			> span {
+				float: left; // Collapse white-space
+				padding: 6px 14px;
+				line-height: @baseLineHeight;
+				color: @linkColor;
+				text-decoration: none;
+				background-color: @paginationBackground;
+				border: 1px solid @paginationBorder;
+				border-left-width: 0;
+			}
+			> a:hover,
+			> a:focus {
+				background-color: @linkColorHover;
+				color: @white;
+				.transition(~"all .2s");
+			}
+			> a:active {
+				.box-shadow(inset 0 0 5px 1px @linkColorDark);
+			}
+			> .current,
+			> .current:hover,
+			> .current:focus {
+				background-color: @paginationCurrentBackground;
+				color: @gray9;
+				cursor: default;
+			}
+			> .dots,
+			> .dots:hover,
+			> .dots:focus {
+				color: @gray9;
+				cursor: default;
+			}
+			&:first-child > a,
+			&:first-child > span {
+				border-left-width: 1px;
+				.border-left-radius(@paginationBorderRadious);
+			}
+			&:last-child > a,
+			&:last-child > span {
+				.border-right-radius(@paginationBorderRadious);
+			}
+		}
+	}
+}
+// Alignment
+.pagination-centered {
+	text-align: center;
+}
+.pagination-right {
+	text-align: right;
+}
+
+
+// Pager pagination
+// --------------------------------------------------
+.pager {
+	margin: @baseLineHeight 0;
+	list-style: none;
+	text-align: center;
+	.clearfix();
+	li {
+		display: inline;
+		> a {
+			display: inline-block;
+			padding: 5px 14px;
+			background-color: @paginationBackground;
+			border: 1px solid @paginationBorder;
+			.border-radius(@paginationBorderRadious);
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background-color: @linkColorHover;
+				color: @white;
+				.transition(~"all .2s");
+			}
+			&:active {
+				.box-shadow(inset 0 0 5px 1px @linkColorDark);
+			}
+		}
+	}
+	.previous > a {
+		float: left;
+	}
+	.next > a {
+		float: right;
+	}
+}

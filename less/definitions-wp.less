@@ -1,0 +1,100 @@
+//
+// Definitions Wordpress
+// --------------------------------------------------
+
+
+.entry-content {
+	line-height: @baseLineHeight + 5;
+	> p,
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6,
+	> blockquote,
+	> ul,
+	> pre,
+	> ol,
+	> address,
+	> button,
+	> table {
+		margin-bottom: @baseLineHeight + 10;
+	}
+	img {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	img.centered {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: @baseLineHeight;
+	}
+	img.alignright {
+		float: right;
+		margin-left: @baseLineHeight;
+		margin-bottom: @baseLineHeight;
+	}
+	img.alignleft, img.alignnone {
+		float: left;
+		margin-right: @baseLineHeight;
+		margin-bottom: @baseLineHeight;
+	}
+	div.centered {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	div.alignright {
+		float: right;
+		margin-right: @baseLineHeight !important;
+		margin-left: @baseLineHeight !important;
+		margin-bottom: @baseLineHeight !important;
+	}
+	div.alignleft, div.alignnone {
+		float: left;
+		margin-left: @baseLineHeight !important;
+		margin-right: @baseLineHeight !important;
+		margin-bottom: @baseLineHeight !important;
+	}
+	.wp-caption {
+		margin-right: auto;
+		margin-left: auto;
+		background-color: @white;
+		margin-bottom: @baseLineHeight + 10;
+		clear: both;
+		border-color: @red;
+		border-style: solid solid ridge;
+		border-width: 1px 1px 4px;
+			.wp-caption-text {
+				padding: @baseLineHeight;
+				margin-bottom: 0 !important;
+		}
+		img {
+			margin-top: @baseLineHeight;
+		}
+	}
+	ol li {
+		list-style: inside decimal;
+	}
+	ul li {
+		list-style: inside disc;
+	}
+	ul ul li {
+		list-style: inside circle;
+	}
+	ul ul ul li {
+		list-style: inside square;
+	}
+	ul ul, ol ol {
+		margin-left: 20px;
+		margin-top: 3px;
+	}
+	ul li, ol li {
+		margin-bottom: 3px;
+	}
+}

@@ -1,0 +1,94 @@
+//
+// Tables
+// --------------------------------------------------
+
+// BASE TABLES
+// -----------------
+table {
+	max-width: 100%;
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// BASELINE STYLES
+// ---------------
+table {
+	width: 100%;
+//  margin-bottom: @baseLineHeight;
+	background-color: @tableBackground; // Nesting
+	// Cells
+	th,
+	td {
+		padding: 8px;
+		line-height: @baseLineHeight;
+		text-align: left;
+		vertical-align: top;
+	}
+	tbody th, tbody td, tfoot tr, tfoot th, tfoot td {
+		border-top: 1px solid @tableBorder;
+	}
+	th, caption, thead, thead tr, thead th, thead td {
+		font-weight: bold;
+	}
+	// Bottom align for column headings
+	thead th {
+		vertical-align: bottom;
+	}
+	// Remove top border from thead by default
+	caption + thead tr:first-child th,
+	caption + thead tr:first-child td,
+	colgroup + thead tr:first-child th,
+	colgroup + thead tr:first-child td,
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+		border-top: 0;
+	}
+	// Account for multiple tbody instances
+	tbody + tbody {
+		border-top: 2px solid @tableMultipleTbody;
+	}
+}
+
+
+// ZEBRA-STRIPING
+// --------------
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+table {
+	tbody {
+		> tr:nth-child(odd) > td,
+		> tr:nth-child(odd) > th {
+			background-color: @tableBackgroundAccent;
+		}
+	}
+}
+
+
+// TABLE CELL SIZING
+// -----------------
+// Reset default grid behavior
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+	display: table-cell;
+	float: none; // undo default grid column styles
+	margin-left: 0; // undo default grid column styles
+}
+
+// Change the column widths to account for td/th padding
+table td,
+table th {
+	&.span1	{ .tableColumns(1); }
+	&.span2	{ .tableColumns(2); }
+	&.span3	{ .tableColumns(3); }
+	&.span4	{ .tableColumns(4); }
+	&.span5	{ .tableColumns(5); }
+	&.span6	{ .tableColumns(6); }
+	&.span7	{ .tableColumns(7); }
+	&.span8	{ .tableColumns(8); }
+	&.span9	{ .tableColumns(9); }
+	&.span10	{ .tableColumns(10); }
+	&.span11	{ .tableColumns(11); }
+	&.span12	{ .tableColumns(12); }
+}

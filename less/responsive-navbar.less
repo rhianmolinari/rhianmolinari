@@ -1,0 +1,120 @@
+//
+// Responsive: Navbar
+// --------------------------------------------------
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+
+	// UNFIX THE TOPBAR
+	// ----------------
+	// Remove any padding from the body
+	body {
+		padding-top: 0;
+	}
+	// Account for brand name
+	.navbar .brand {
+		padding: 0;
+		margin: 10px 0 10px 0;
+	}
+
+	// COLLAPSIBLE NAVBAR
+	// ------------------
+	// Nav collapse clears brand
+	.nav-collapse {
+		clear: both;
+	}
+	// Block-level the nav
+	.nav-collapse .nav {
+		float: none;
+		margin: 0 0 (@baseLineHeight / 2);
+	}
+	.nav-collapse .nav > li {
+		float: none;
+	}
+	.nav-collapse .nav > li > a {
+		margin-bottom: 0; // 2px
+	}
+
+	// Nav and dropdown links in navbar
+	.nav-collapse .nav > li > a {
+		padding: 12px 15px;
+		font-weight: bold;
+	}
+	// Pull right (secondary) nav content
+	.navbar .nav-collapse .nav.pull-right {
+		float: none;
+		margin-left: 0;
+	}
+	// Hide everything in the navbar save .brand and toggle button */
+	.nav-collapse,
+	.nav-collapse.collapse {
+		overflow: hidden;
+		height: 0;
+	}
+	// Navbar button
+	.navbar .btn-navbar {
+		display: block;
+	}
+
+	// Custom
+	// ------------
+	.navbar {
+		.nav {
+			li {
+				a {
+					width: 100% !important;
+					.box-sizing(border-box);
+					border-width: 0 0 0 4px;
+					border-style: solid;
+					border-color: transparent;
+				}
+				&:hover > a,
+				&:focus > a,
+				&:active > a {
+					border-left-color: @linkColor;
+					background-color: @grayFB !important;
+				}
+			}
+			> li {
+				+ li {
+					border-top: 1px solid @grayF5;
+				}
+				+ li:before {
+					content: none !important;
+				}
+				.sub-menu {
+					display: block !important;
+					position: relative;
+					border: 0;
+					margin-left: 10px;
+					li {
+						a:after {
+							background-position: -313px -119px;
+						}
+						.sub-menu {
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media (min-width: @navbarCollapseDesktopWidth) {
+
+	// Required to make the collapsing navbar work on regular desktops
+	.nav-collapse.collapse {
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+}

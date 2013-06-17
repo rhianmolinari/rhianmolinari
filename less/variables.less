@@ -1,0 +1,187 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+@white:							#FFFFFF;
+@grayFA:						#FAFAFA;
+@grayFB:						#FBFBFB;
+@grayF5:						#F5F5F5;
+@grayE5:						#E5E5E5;
+@grayE:							#EEEEEE;
+@grayC:							#CCCCCC;
+@gray9:							#999999;
+@gray6:							#666666;
+@gray3:							#333333;
+@black:							#000000;
+
+// Links
+// -------------------------
+@linkColor:						#3498DB;
+@linkColorHover:				darken(@linkColor, 8%);
+@linkColorDark:					darken(@linkColor, 18%);
+@linkColorLight:				lighten(@linkColor, 10%);
+
+// HTML5 Invalid
+// -------------------------
+@red:							#E55C5C;
+@redDark:						darken(@red, 10%);
+@redLight:						lighten(@red, 20%);
+
+// Typography
+// -------------------------
+@sansFontFamily:				"Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:				Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:				Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:					14px;
+@baseFontFamily:				@sansFontFamily;
+@baseLineHeight:				20px;
+@altFontFamily:					@serifFontFamily;
+
+@headingsFontFamily:			inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:			bold;    // instead of browser default, bold
+@headingsColor:					inherit; // empty to use BS default, @textColor
+
+// Component sizing
+// -------------------------
+@baseBorderRadius:				2px;
+
+// Breadcrumb
+// -------------------------
+@breadcrumbBackground:			transparent;
+@breadcrumbMargin:				0;
+@breadcrumbColorDivider:		@gray6;
+@breadcrumbColorActive:			@gray9;
+
+// Tables
+// -------------------------
+@tableBackground:				@white; // overall background-color
+@tableBackgroundAccent:			@grayFB; // for striping
+@tableBorder:					@grayE5; // table and cell border
+@tableMultipleTbody:			@gray6; // border multiple tbody instances
+
+// Forms
+// -------------------------
+@inputBackground:				@white;
+@inputBorder:					@grayC;
+@inputBorderFocus:				@gray6;
+@inputBorderType:				solid solid ridge;
+@inputBorderWidth:				1px 1px 5px;
+@inputBorderRadius:				@baseBorderRadius;
+@inputDisabledBackground:		@grayE5;
+@inputHeight:					@baseLineHeight; // base 2px top/bottom border
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:				1000;
+@zindexTooltip:					1030;
+
+// Sprite icons path
+// -------------------------
+@iconSpritePath:				"../img/glyphicons-halflings.png";
+@iconWhiteSpritePath:			"../img/glyphicons-halflings-white.png";
+
+// Flexslider
+// -------------------------
+@slideSpritePath:				"../img/glyphicons-halflings-white.png";
+@navControlBackground:			@white;
+@navControlBorder:				2px solid @black;
+@navControlBackgroundHover:		@gray9;
+@navControlBackgroundActive:	@black;
+@navDirectionBackground:		@gray3;
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:				@gray9;
+
+// Selection text color and background color
+// -------------------------
+@selectionText:					@white;
+@selectionBackground:			@black;
+
+// Hr border color
+// -------------------------
+//									(R,G,B, Alpha)				
+@hrBorderIn:					rgba(204,204,204,1); // #CCCCCC
+@hrBorderOut:					rgba(255,255,255,0); // Transparent
+
+// Hr border color
+// -------------------------
+@defaultColorGradientStart:		@red;
+@defaultColorGradientEnd:		@linkColor; // Principal
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:		180px;
+
+// Navbar
+// -------------------------
+@navbarCollapseWidth:			979px;
+@navbarCollapseDesktopWidth:	@navbarCollapseWidth + 1;
+@navbarHeight:					40px;
+@navbarBackground:				@white;
+@navbarBorderBottom:			1px solid @grayE5;
+@navbarBorderTop:				2px solid @black;
+@navbarButtonToggle:			@linkColorHover;
+
+// Pagination
+// -------------------------
+@paginationBackground:			@white;
+@paginationBorder:				@grayE5;
+@paginationCurrentBackground:	@grayE;
+@paginationBorderRadious:		2px;
+
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:					@white;
+@tooltipBackground:				@black;
+@tooltipArrowWidth:				5px;
+@tooltipArrowColor:				@tooltipBackground;
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+@gridColumns:				12;
+@gridColumnWidth:			60px;
+@gridGutterWidth:			20px;
+@gridRowWidth:				(@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:		70px;
+@gridGutterWidth1200:		30px;
+@gridRowWidth1200:			(@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:		42px;
+@gridGutterWidth768:		20px;
+@gridRowWidth768:			(@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:		percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:		percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:	percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:	percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:	percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:	percentage(@gridGutterWidth768/@gridRowWidth768);

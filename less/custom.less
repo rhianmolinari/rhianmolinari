@@ -1,0 +1,394 @@
+//
+// Custom
+// --------------------------------------------------
+
+
+// Logo
+.brand {
+	.transition(all .3s);
+	img {
+		max-height: 52px;
+		width: auto;
+	}
+}
+
+// Search
+#open-search {
+	padding: ((@navbarHeight - @baseLineHeight) + 2 );
+	text-align: center;
+	display: inline-block;
+	float: right;
+	&:hover .my-search,
+	&:focus .my-search {
+		background-position: 0 -24px;
+	}
+	.my-search {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		.ie7-restore-right-whitespace();
+		line-height: 14px;
+		vertical-align: text-top;
+		background-image: url("../img/search.png");
+		background-position: 0 0;
+		background-repeat: no-repeat;
+	}
+}
+
+// Slide home
+.featured {
+	padding: 25px 0 20px;
+	.row {
+		div hgroup {
+			text-align: left;
+		}
+	}
+}
+.flexslider .slides > li img {
+	height: 325px;
+}
+
+// Image thumbnail
+.attachment-default {
+	width: 100%;
+	height: 220px;
+	margin-bottom: 20px;
+}
+.attachment-project {
+	width: 100%;
+	height: 200px;
+}
+
+// Download file single
+.single-post .form-actions button {
+	margin-right: 10px;
+}
+
+// Content home
+.maincontent {
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+	border-color: @grayE5;
+	background-color: @white;
+	padding: 40px 0;
+	// Index
+	.project {
+		> li {
+			margin-bottom: @gridGutterWidth;
+		}
+		li {
+			a {
+				display: block;
+				img {
+					width: 100%;
+					height: 175px;
+				}
+			}
+		}
+	}
+	// Blog
+	article {
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid @grayE;
+		.meta {
+			text-align: right;
+			time {
+				display: block;
+				border-right: 1px solid @grayC;
+				span {
+					display: block;
+				}
+				.day {
+					font-size: @baseFontSize * 3;
+					line-height: @baseLineHeight * 2;
+					font-weight: bold;
+				}
+				.month {
+					font-size: @baseFontSize;
+					line-height: @baseLineHeight;
+				}
+			}
+			.post-author {
+				margin-bottom: 20px;
+				display: block;
+			}
+			time, .post-author, ul {
+				padding-right: 10px;
+			}
+		}
+	}
+}
+.single-post .maincontent article,
+.single-project .maincontent article,
+.page-template-about-php .maincontent article {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border: none;
+}
+
+// Author
+#author-bio {
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	padding: 30px 0;
+	border-color: @grayE;
+	margin: 30px 0;
+	img {
+		float: left;
+	}
+	> div {
+		margin-left: 130px;
+	}
+}
+.author-twitter:before {
+	content: '@';
+}
+.avatar {
+	border: 4px solid @black;
+	.box-sizing(border-box);
+}
+
+// Footer
+footer {
+	padding-top: 40px;
+	border-bottom: 2px solid @gray3;
+	.footer {
+		ul {
+			li {
+				span {
+					display: block;
+				}
+			}
+		}
+		#google_translate_element {
+			margin-bottom: @baseLineHeight - 5;
+		}
+	}
+	.copyright {
+		margin-top: @baseLineHeight + 5;
+		padding: @baseLineHeight - 12;
+		text-align: center;
+		small {
+			a:first-child {
+				margin-right: 10px;
+			}
+			p {
+				margin: 0;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+// Not Found
+.notfound {
+	> p,
+	> form {
+		text-align: center;
+	}
+}
+
+// List space element
+footer ul li,
+aside ul li,
+.meta ul li {
+	padding-top: 8px;
+	margin-bottom: 8px;
+}
+
+// List (– Color)
+.trace {
+	li:before {
+		content: '–';
+		color: @linkColor;
+		margin-right: 0.5em;
+	}
+}
+
+// Title group
+hgroup {
+	margin: 20px 0;
+	text-align: center;
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		margin: 0;
+	}
+}
+.home.blog > .maincontent > .container > hgroup:first-child {
+	margin-top: 0;
+}
+
+// Sidebar
+.sidebar {
+	> div {
+		margin-bottom: @gridGutterWidth * 2;
+	}
+	.avatar {
+		margin-bottom: @gridGutterWidth;
+		.center-block();
+	}
+	li.categories {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+}
+// Sidebar experience
+.experience {
+	> ul {
+		> li {
+			padding-top: 15px;
+			margin-bottom: 15px;
+			> strong,
+			> p {
+				margin: 0;
+				display: block;
+			}
+		}
+	}
+}
+
+// Tagcloud
+.tagcloud {
+	> a {
+		background-color: @grayF5;
+		border: 1px solid @grayC;
+		border-radius: 2px;
+		padding: 0.2em;
+		margin: 0.1em;
+		display: inline-block;
+		vertical-align: middle;
+		&:hover,
+		&:focus {
+			background-color: @linkColor;
+			border-color: @linkColorHover;
+			color: @white;
+		}
+	}
+}
+
+// Google Translate
+.goog-te-combo {
+	width: 100%;
+}
+.goog-logo-link {
+	display: block;
+}
+
+// Link underline dotted
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.meta small,
+footer ul li,
+.meta ul li,
+aside ul li,
+.breadcrumb {
+	a {
+		border-bottom: 1px dotted @gray9;
+		padding-bottom: 1px;
+		&:hover,
+		&:focus {
+			border-bottom-style: solid;
+			border-bottom-color: @linkColorLight;
+		}
+		&:active {
+			background-color: @linkColorHover;
+			color: @white;
+			border-bottom-style: solid;
+			border-bottom-color: @linkColorLight;
+		}
+	}
+}
+
+// Link on title
+a {
+	> h1:hover, > h1:focus,
+	> h2:hover, > h2:focus,
+	> h3:hover, > h3:focus,
+	> h4:hover, > h4:focus,
+	> h5:hover, > h5:focus,
+	> h6:hover, > h6:focus {
+		color: @linkColor;
+	}
+}
+
+
+// Custom Responsive
+// ---------------
+@media (min-width: 1200px) {
+
+	.flexslider .slides > li img {
+		height: 400px;
+	}
+	.maincontent .project li a img {
+		height: 200px;
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	#open-search,
+	.navbar-search {
+		display: none !important;
+	}
+	header nav {
+		display: block !important;
+	}
+	.nav-collapse.collapse {
+		border-top-width: 1px;
+		border-top-style: solid;
+		top: 1px;
+		border-top-color: @grayE5;
+	}
+
+	.flexslider .slides > li img {
+		height: 250px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.goog-logo-link > img { display: block; }
+
+	.maincontent .project li a img {
+		height: 125px;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.maincontent,
+	.navbar.navbar-inner,
+	footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	footer > .footer > .container > .row > div + div,
+	.sidebar > div + div,
+	.sidebar,
+	.process > li + li,
+	.plus div + div {
+		margin-top: 50px;
+	}
+	.hidden-767px {
+		display: none !important;
+	}
+
+	.maincontent .project li a img {
+		height: 300px;
+	}
+
+}

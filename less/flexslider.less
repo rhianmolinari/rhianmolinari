@@ -1,0 +1,79 @@
+//
+// Flexslider
+// --------------------------------------------------
+
+
+.flexslider {
+	zoom: 1;
+	position: relative;
+	margin-bottom: 60px;
+	.user-select(none);
+	.slides {
+		zoom: 1;
+		> li {
+			list-style: none;
+			display: none;
+			-webkit-backface-visibility: hidden;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	.flex-control-nav {
+		width: 100%;
+		position: absolute;
+		bottom: -45px;
+		text-align: center;
+		li {
+			margin: 0 10px;
+			display: inline-block;
+			zoom: 1;
+			a {
+				cursor: pointer;
+				display: block;
+				width: 12px;
+				height: 12px;
+				background-color: @navControlBackground;
+				border: @navControlBorder;
+				text-indent: -9999px;
+				.border-radius(100%);
+				&:hover,
+				&:focus {
+					background-color: @navControlBackgroundHover;
+				}
+				&.flex-active {
+					cursor: default;
+					background-color: @navControlBackgroundActive;
+				}
+			}
+		}
+	}
+	.flex-direction-nav {
+		a {
+			cursor: pointer;
+			display: block;
+			width: 32px;
+			height: 32px;
+			margin: -20px 0 0;
+			background-image: url("@{slideSpritePath}");
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-color: @navDirectionBackground;
+			position: absolute;
+			top: 50%;
+			text-indent: -9999px;
+			.border-radius(100%);
+			.opacity(0);
+			.transition(all .3s ease);
+		}
+		.flex-prev {
+			background-position: -423px -64px; //-432px -72px;
+			left: 10px;
+		}
+		.flex-next {
+			background-position: -447px -64px; //-456px -72px;
+			right: 10px;
+		}
+	}
+}

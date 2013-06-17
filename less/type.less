@@ -1,0 +1,217 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body text
+// -------------------------
+p {
+	margin: 0 0 @baseLineHeight / 2;
+}
+.lead {
+	margin-bottom: @baseLineHeight;
+	font-size: @baseFontSize * 1.5;
+	font-weight: 200;
+	line-height: @baseLineHeight * 1.5;
+}
+
+// Emphasis & misc
+// -------------------------
+// Ex: 14px base font * 85% = about 12px
+small {
+	font-size: 85%;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+cite {
+	font-style: normal;
+}
+
+// Headings
+// -------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 (@baseLineHeight / 2) 0;
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	line-height: @baseLineHeight;
+	color: @black;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	small {
+		font-weight: normal;
+		text-transform: none;
+		line-height: 1;
+		color: @gray9;
+	}
+}
+h1,
+h2 {
+	line-height: @baseLineHeight * 2 + 5;
+}
+h1 {
+	font-size: @baseFontSize * 2.75; // ~38px
+	font-weight: 500;
+}
+h2 { 
+	font-size: @baseFontSize * 2.25; // ~32px
+	font-weight: 500;
+	text-transform: uppercase;
+}
+h3 { 
+	font-size: @baseFontSize * 1.5; // 1.75 // ~24px
+	font-weight: 100;
+	letter-spacing: 1px;
+	line-height: @baseLineHeight + 10;
+	color: @gray6;
+}
+h4 {
+	text-transform: uppercase;
+}
+h4,
+h5 { 
+	font-size: @baseFontSize * 1.25; // ~18px
+	font-weight: 600;
+}
+h6 {
+	font-size: @baseFontSize; // ~12px
+}
+
+h1 small { font-size: @baseFontSize * 1.75; } // ~24px
+h2 small { font-size: @baseFontSize * 1.25; } // ~18px
+
+h3 small,
+h4 small,
+h5 small,
+h6 small { font-size: @baseFontSize; }
+
+// Page header
+// -------------------------
+.page-header {
+	padding-bottom: (@baseLineHeight / 2) - 1;
+	margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
+	border-bottom: 1px solid @grayC;
+}
+
+// Lists
+// --------------------------------------------------
+// Unordered and Ordered lists
+ul, ol {
+	padding: 0;
+//	margin: 0 0 @baseLineHeight / 2 25px;
+	margin: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+li {
+	line-height: @baseLineHeight;
+	list-style: none;
+}
+
+// Description Lists
+dl {
+	margin: 0 0 @baseLineHeight 0;
+}
+dt,
+dd {
+	line-height: @baseLineHeight;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: @baseLineHeight / 2;
+}
+
+// Description Lists Horizontal layout (like forms)
+.dl-horizontal {
+	.clearfix(); // Ensure dl clears floats if empty dd elements present
+	dt {
+		float: left;
+		width: @horizontalComponentOffset - 20;
+		clear: left;
+		text-align: right;
+		.text-overflow();
+	}
+	dd {
+		margin-left: @horizontalComponentOffset;
+	}
+}
+
+// MISC
+// ----
+// Horizontal rules
+hr {
+	margin: (@baseLineHeight * 2) 0;
+	border: 0;
+	height: 1px;
+	.hrBorder();
+}
+// Selection
+* {
+	.selection();
+}
+
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayC;
+}
+
+// Blockquotes
+blockquote {
+	margin: 0; // margin: 20px 30px;
+//	border-left: 3px solid @black;
+	color: @gray9 !important;
+	padding-left: 50px;
+	
+	background-repeat: no-repeat;
+	background-position: left 3px;
+	background-image: url(../img/quotes.png);
+	p {
+		margin: 0 !important;
+		font-size: @baseFontSize * 1.75;
+		font-weight: 200;
+		line-height: 1.25;
+	}
+	small {
+		display: block;
+		margin-top: 5px;
+		line-height: @baseLineHeight + 10;
+		color: @gray3 !important;
+		font-size: @baseFontSize + 4;
+		text-transform: uppercase;
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+	content: "";
+}
+
+// Addresses
+address {
+	display: block;
+	//margin-bottom: @baseLineHeight * 0.8;
+	font-style: normal;
+	line-height: @baseLineHeight;
+}
