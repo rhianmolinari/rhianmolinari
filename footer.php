@@ -16,7 +16,7 @@
 						<h3>Newsletter</h3>
 						<form action="http://rhianmolinari.us7.list-manage1.com/subscribe/post?u=8ef86cf04eeaffd179e91c4c3&amp;id=6a0f032f12" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<fieldset>
-								<label class="hidden">Newsletter</label>
+								<label class="hide">Newsletter</label>
 								<input type="text" class="span3" placeholder="nome" value="" name="FNAME" id="mce-FNAME">
 								<input type="text" class="span3" placeholder="sobrenome" value="" name="LNAME" id="mce-LNAME">
 								<input type="email" class="span3" placeholder="e-mail" value="" name="EMAIL" id="mce-EMAIL">
@@ -58,18 +58,26 @@ function googleTranslateElementInit() {
 				<div class="span2">
 					<h3>Rede social</h3>
 					<ul>
+						<?php if ( get_the_author_meta( 'twitter' ) ): ?>
 						<li>
 							<a href="http://www.twitter.com/<?php the_author_meta( 'twitter', 1 ); ?>" target="_blank">twitter</a>
 						</li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'facebook' ) ): ?>
 						<li>
 							<a href="<?php the_author_meta( 'facebook', 1 ); ?>" target="_blank">facebook</a>
 						</li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'googleplus' ) ): ?>
 						<li>
 							<a href="<?php the_author_meta( 'googleplus', 1 ); ?>" target="_blank">google+</a>
 						</li>
+						<?php endif; ?>
+						<?php if ( get_the_author_meta( 'linkedin' ) ): ?>
 						<li>
 							<a href="<?php the_author_meta( 'linkedin', 1 ); ?>" target="_blank">linkedin</a>
 						</li>
+						<?php endif; ?>
 					</ul>
 				</div>
 				
@@ -78,9 +86,11 @@ function googleTranslateElementInit() {
 					<p>
 						<a href="mailto:<?php the_author_meta( 'user_email', 1 ); ?>">hello<span>[at]</span>rhianmolinari<span>.</span>com</a>
 					</p>
+					<?php if ( get_the_author_meta( 'phone' ) ): ?>
 					<p>
 						<a href="tel:+number"><?php the_author_meta( 'phone', 1 ); ?></a>
 					</p>
+					<?php endif; ?>
 				</div>
 
 			</div>

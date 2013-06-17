@@ -55,7 +55,7 @@
 		</a>
 		<form role="search" class="navbar-search" method="get" action="<?php bloginfo(url); ?>">
 			<fieldset>
-				<label for="search" class="hidden">Buscar por</label>
+				<label for="search" class="hide">Buscar por</label>
 				<input type="search" value="<?php the_search_query(); ?>" id="search" name="s" placeholder="What are you looking for?" />
 				<button>Buscar</button>
 			</fieldset>
