@@ -17,10 +17,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
 
-
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/bootstrap.less" type="text/less" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/responsive.less" type="text/less" />
-
 
 <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js" type="text/javascript" ></script>
 <script src="<?php bloginfo('template_url'); ?>/js/less-1.3.3.min.js" type="text/javascript" ></script>
@@ -50,13 +48,13 @@
 				);
 			?>
 		</nav>
-		<a href="#" title="Search" id="open-search" class="">
+		<a href="#" title="Search" id="open-search">
 			<i class="my-search"></i>
 		</a>
 		<form role="search" class="navbar-search" method="get" action="<?php bloginfo(url); ?>">
 			<fieldset>
 				<label for="search" class="hide">Buscar por</label>
-				<input type="search" value="<?php the_search_query(); ?>" id="search" name="s" placeholder="What are you looking for?" />
+				<input type="search" value="<?php the_search_query(); ?>" id="search" name="s" placeholder="O que voc&ecirc; esta procurando?" />
 				<button>Buscar</button>
 			</fieldset>
 		</form>

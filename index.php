@@ -45,7 +45,7 @@ get_header(); ?>
 	<div class="container">
 		<hgroup>
 			<h2>Projetos</h2>
-			<h3>Veja meus &uacute;ltimos projetos executados.</h3>
+			<h3>Veja meus &uacute;ltimos projetos realizados.</h3>
 		</hgroup>
 		<ul class="row project">
 			<?php query_posts(array(

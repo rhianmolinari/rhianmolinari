@@ -21,7 +21,7 @@ function rw_register_meta_boxes() {
 	// 1st meta box (CLIENT)
 	$meta_boxes[] = array(
 		'id' => 'descricao_do_projeto', // $id
-		'title' => 'Descri&ccedil;&aacute;o do projeto', // $title
+		'title' => 'Descri&ccedil;&atilde;o do projeto', // $title
 		'pages' => array( 'projeto' ), // $post_type
 		'context' => 'side', // $context
 		'priority' => 'low', // $priority

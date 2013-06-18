@@ -32,7 +32,7 @@ function rhianmolinari_projects() {
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
-		'rewrite' => true,
+		'rewrite' => false,
 		'capability_type' => 'post'
 	);
 
@@ -101,19 +101,19 @@ function rhianmolinari_slide() {
 	);
 	$args = array(
 		'labels' => $labels,
-		'hierarchical' => true,
+		'hierarchical' => false,
 		'description' => 'Slide Homepage',
 		'supports' => array( 'title' ),
 		'taxonomies' => array( 'slide' ),
-		'public' => true,
+		'public' => false,
 		'show_ui' => true,
 		'show_in_menu' => true,
 		'show_in_nav_menus' => true,
 		'menu_position' => 5,
 		'publicly_queryable' => true,
-		'exclude_from_search' => false,
-		'has_archive' => true,
-		'query_var' => true,
+		'exclude_from_search' => true,
+		'has_archive' => false,
+		'query_var' => false,
 		'can_export' => true,
 		'rewrite' => true,
 		'capability_type' => 'post'

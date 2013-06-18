@@ -1,6 +1,5 @@
 <?php
 /**
- * Template Name: Blog
  * @package WordPress
  * @subpackage Rhian_Molinari
  * @since Rhian Molinari 1.0

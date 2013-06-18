@@ -43,7 +43,7 @@ function rhianmolinari_add_dropdown($settings) {
 		array(
 			'title' => 'Pre',
 			'block' => 'pre',
-			'classes' => 'notranslate'
+			'classes' => array( 'notranslate', 'prettyprint', 'linenums' )
 		),
 		array(
 			'title' => 'No translate',

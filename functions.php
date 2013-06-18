@@ -15,7 +15,7 @@ function rhianmolinari_theme_setup() {
 
 	// Size thumbnail
 	add_image_size( 'featured', 770, 400, true ); // Slide
-	add_image_size( 'project', 270, 200, true ); // Project
+	add_image_size( 'project', 770, 540, true ); // Project
 	add_image_size( 'default', 770, 220, true ); // Post
 
 	// Add excerpt on page
@@ -91,20 +91,20 @@ function disqus_embed($disqus_shortname) {
 	</script>';
 }
 
-// Search Filter
+/* Search Filter
 function search_filter($query) {
 	if ($query->is_search) {
 		$query->set( 'post_type', array(
 			'post',
 			'page',
-			'project',
-			'project_type'
+			'projeto',
+			'tipo_projeto'
 			)
 		);
 	}
 	return $query;
 }
-add_filter('pre_get_posts','search_filter');
+add_filter('pre_get_posts','search_filter');*/
 
 // Includes
 require_once('includes/widget.php');

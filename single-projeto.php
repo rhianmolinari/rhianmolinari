@@ -33,7 +33,7 @@ get_header(); ?>
 					</section>
 				</article>
 			</div>
-			<?php get_sidebar('project'); ?>
+			<?php get_sidebar('projeto'); ?>
 		</div>
 	</div>
 </section>
