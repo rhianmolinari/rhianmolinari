@@ -15,7 +15,6 @@ table {
 // ---------------
 table {
 	width: 100%;
-//  margin-bottom: @baseLineHeight;
 	background-color: @tableBackground; // Nesting
 	// Cells
 	th,
@@ -47,6 +46,15 @@ table {
 	// Account for multiple tbody instances
 	tbody + tbody {
 		border-top: 2px solid @tableMultipleTbody;
+	}
+	thead {
+		border-top: 2px solid @gray6;
+	}
+	tfoot {
+		border-bottom: 2px solid @gray6;
+	}
+	tbody {
+		border-bottom: 1px solid @gray6;
 	}
 }
 

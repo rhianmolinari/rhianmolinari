@@ -106,6 +106,12 @@ function search_filter($query) {
 }
 add_filter('pre_get_posts','search_filter');*/
 
+/* Add style.css in editor Wordpress
+function rhianmolinari_add_editor_styles() {
+	add_editor_style( 'style.css' );
+}
+add_action( 'init', 'rhianmolinari_add_editor_styles' );*/
+
 // Includes
 require_once('includes/widget.php');
 require_once('includes/custom_user.php');

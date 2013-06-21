@@ -33,7 +33,7 @@ function rhianmolinari_register_dropdown($buttons) {
 add_filter( 'mce_buttons_2', 'rhianmolinari_register_dropdown' );
 
 function rhianmolinari_add_dropdown($settings) {
-	$settings['theme_advanced_blockformats'] = 'p,address,h1,h2,h3,h4,h5,h6';
+	$settings['theme_advanced_blockformats'] = 'p,h1,h2,h3,h4,h5,h6,address,pre';
 	$style_formats = array(
 		array(
 			'title' => 'Code',
@@ -49,17 +49,15 @@ function rhianmolinari_add_dropdown($settings) {
 			'title' => 'No translate',
 			'inline' => 'span',
 			'classes' => 'notranslate'
+		),
+		array(
+			'title' => 'Small',
+			'inline' => 'small',
 		)
 	);
 	$settings['style_formats'] = json_encode( $style_formats );
 	return $settings;
 }
 add_filter( 'tiny_mce_before_init', 'rhianmolinari_add_dropdown' );
-
-// Add style.css in editor Wordpress
-function rhianmolinari_add_editor_styles() {
-	add_editor_style( 'style.css' );
-}
-add_action( 'init', 'rhianmolinari_add_editor_styles' );
 
 ?>

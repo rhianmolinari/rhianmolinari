@@ -5,14 +5,9 @@
 
 .entry-content {
 	line-height: @baseLineHeight + 5;
+	margin-top: @baseLineHeight;
 	.clearfix();
 	> p,
-	> h1,
-	> h2,
-	> h3,
-	> h4,
-	> h5,
-	> h6,
 	> blockquote,
 	> ul,
 	> pre,
@@ -22,6 +17,14 @@
 	> table {
 		margin-bottom: @baseLineHeight + 10;
 	}
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		margin-bottom: @baseLineHeight - 5;
+	}
 	img {
 		margin-left: auto;
 		margin-right: auto;
@@ -29,7 +32,7 @@
 		max-width: 100%;
 		height: auto;
 	}
-	img.centered {
+	img.centered, img.alignnone {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -40,43 +43,45 @@
 		margin-left: @baseLineHeight;
 		margin-bottom: @baseLineHeight;
 	}
-	img.alignleft, img.alignnone {
+	img.alignleft {
 		float: left;
 		margin-right: @baseLineHeight;
 		margin-bottom: @baseLineHeight;
 	}
-	div.centered {
+	div.centered, div.alignnone {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 	}
 	div.alignright {
 		float: right;
-		margin-right: @baseLineHeight !important;
-		margin-left: @baseLineHeight !important;
-		margin-bottom: @baseLineHeight !important;
+		margin-left: @baseLineHeight;
+		margin-bottom: @baseLineHeight + 10;
 	}
-	div.alignleft, div.alignnone {
+	div.alignleft {
 		float: left;
-		margin-left: @baseLineHeight !important;
-		margin-right: @baseLineHeight !important;
-		margin-bottom: @baseLineHeight !important;
+		margin-right: @baseLineHeight;
+		margin-bottom: @baseLineHeight + 10;
 	}
 	.wp-caption {
 		margin-right: auto;
 		margin-left: auto;
+		width: auto !important;
+		max-width: 100% !important;
 		background-color: @white;
-		margin-bottom: @baseLineHeight + 10;
-		clear: both;
-		border-color: @red;
-		border-style: solid solid ridge;
-		border-width: 1px 1px 4px;
-			.wp-caption-text {
-				padding: @baseLineHeight;
+		margin-bottom: @baseLineHeight;
+		text-align: center;
+		border: none;
+		.clearfix();
+			> .wp-caption-text {
+				padding: @baseLineHeight / 2;
 				margin-bottom: 0 !important;
+				font-style: italic;
+				font-size: @baseFontSize - 1;
+				color: @gray6;
 		}
-		img {
-			margin-top: @baseLineHeight;
+		> img {
+			margin-top: 5px;
 		}
 	}
 	ol li {
