@@ -24,7 +24,7 @@ get_header(); ?>
 						the_post_thumbnail( 'default' );
 					} ?>
 					<div class="row">
-						<div class="meta span2 hidden-767px">
+						<div class="meta span2 hide-767px">
 							<time datetime="<?php the_time('c'); ?>">
 								<span class="day"><?php the_time('d'); ?></span>
 								<span class="month"><?php the_time('M \'y'); ?></span>

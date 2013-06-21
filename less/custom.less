@@ -45,7 +45,7 @@
 	}
 }
 .flexslider .slides > li img {
-	height: 325px;
+	max-height: 400px;
 }
 
 // Image thumbnail
@@ -336,12 +336,10 @@ a {
 // ---------------
 @media (min-width: 1200px) {
 
-	.flexslider .slides > li img {
-		height: 400px;
-	}
 	.maincontent .project li a img {
 		height: 200px;
 	}
+
 }
 
 @media (max-width: @navbarCollapseWidth) {
@@ -358,10 +356,6 @@ a {
 		border-top-style: solid;
 		top: 1px;
 		border-top-color: @grayE5;
-	}
-
-	.flexslider .slides > li img {
-		height: 250px;
 	}
 
 }
