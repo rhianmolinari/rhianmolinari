@@ -36,6 +36,7 @@ get_header(); ?>
 									$categories = get_the_category();
 									if($categories){
 										foreach($categories as $category) {
+											if ($category->term_id == 1)continue;
 											echo '<li><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( $category->name ) . '">'.$category->cat_name.'</a></li>';
 										}
 									}
@@ -67,7 +68,7 @@ get_header(); ?>
 
 							<ul>
 								<li>
-									<a target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?> <?php the_permalink(); ?>&via=rhianmolinari">Share on Twitter</a>
+									<a target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>&via=rhianmolinari">Share on Twitter</a>
 								</li>
 								<li>
 									<a target="_blank" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php the_permalink(); ?><?php if ( '' != get_the_post_thumbnail() )?>&p[images][0]=<?php {echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );} ?>&p[title]=<?php the_title(); ?>&p[summary]=<?php if(has_excerpt()) { echo get_the_excerpt(); } else { echo excerpt(25); } ?>">Share on Facebook</a>

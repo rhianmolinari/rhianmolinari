@@ -24,6 +24,7 @@
 					$categories = get_the_category();
 					if($categories){
 						foreach($categories as $category) {
+							if ($category->term_id == 1)continue;
 							echo '<li><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( $category->name ) . '">'.$category->cat_name.'</a></li>';
 						}
 					}
