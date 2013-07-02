@@ -56,9 +56,9 @@ get_header(); ?>
 				'order'=>'DESC')
 			); if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<?php if ( '' != get_the_post_thumbnail() ) {
-					echo '<li class="span3"><a href="'. get_permalink() . '">';
+					echo '<li class="span3"><a href="'. get_permalink() .'">';
 					the_post_thumbnail( 'project' );
-					echo '</a></li>';
+					echo '<div class="project_info"><h4>'. get_the_title() .'</h4><span>+</span></div></a></li>';
 				} ?>
 			<?php endwhile; ?>
 		</ul>

@@ -6,7 +6,7 @@
  */
 ?>
 
-<form role="search" id="searchform" method="get" action="<?php bloginfo(url); ?>">
+<form role="search" id="searchform" method="get" action="<?php echo home_url( '/' ); ?>">
 	<fieldset>
 		<div class="input-append">
 			<label for="search" class="hide">Buscar por</label>

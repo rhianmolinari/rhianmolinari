@@ -17,7 +17,7 @@
 				<span class="day"><?php the_time('d'); ?></span>
 				<span class="month"><?php the_time('M \'y'); ?></span>
 			</time>
-			<small class="post-author">Por <a href="<?php the_permalink(); ?>#author-bio"><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></a></small>
+			<small class="post-author">Por <a href="<?php the_permalink(); ?>#author-bio"><?php the_author_meta( 'first_name' ); ?> <?php the_author_meta( 'last_name' ); ?></a></small>
 			<?php if(has_category()): ?>
 				<ul>
 					<?php

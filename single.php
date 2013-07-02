@@ -29,7 +29,7 @@ get_header(); ?>
 								<span class="day"><?php the_time('d'); ?></span>
 								<span class="month"><?php the_time('M \'y'); ?></span>
 							</time>
-							<small class="post-author">Por <a href="#author-bio"><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></a></small>
+							<small class="post-author">Por <a href="#author-bio"><?php the_author_meta( 'first_name' ); ?> <?php the_author_meta( 'last_name' ); ?></a></small>
 							<?php if(has_category()): ?>
 								<ul>
 									<?php
@@ -81,8 +81,8 @@ get_header(); ?>
 							<div id="author-bio">
 								<?php echo get_avatar ( get_the_author_meta('user_email'), 100 ); ?>
 								<div>
-									<h4><?php the_author_firstname(); ?> <?php the_author_lastname(); ?></h4>
-									<p><?php the_author_description(); ?></p>
+									<h4><?php the_author_meta( 'first_name' ); ?> <?php the_author_meta( 'last_name' ); ?></h4>
+									<p><?php the_author_meta( 'description' ); ?></p>
 								
 									<?php if ( get_the_author_meta( 'twitter' ) ): ?>
 										<a href="http://twitter.com/<?php the_author_meta( 'twitter' ); ?>" target="_blank" class="author-twitter"><?php the_author_meta( 'twitter' ); ?></a>

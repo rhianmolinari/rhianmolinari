@@ -48,7 +48,7 @@ function remove_version() {
 add_filter( 'the_generator', 'remove_version' );
 
 // Hide Admin Bar
-add_filter( 'show_admin_bar', '__return_false' );
+//add_filter( 'show_admin_bar', '__return_false' );
 
 // Limit word
 function excerpt($limit) {
@@ -90,6 +90,22 @@ function disqus_embed($disqus_shortname) {
 		var disqus_identifier = "'.$disqus_shortname.'-'.$post->ID.'";
 	</script>';
 }
+
+// Custom Login
+function custom_login_logo() {
+	echo '<style type="text/css">div#login h1 a { background-image: url('.get_bloginfo('template_directory').'/img/logo.png) !important; background-size: auto !important; }</style>';
+}
+add_action( 'login_head', 'custom_login_logo' );
+
+function custom_login_url() {
+	return get_bloginfo('url');
+}
+add_filter( 'login_headerurl', 'custom_login_url' );
+
+function custom_login_title() {
+	return get_option('blogname');
+}
+add_filter( 'login_headertitle', 'custom_login_title' );
 
 /* Search Filter
 function search_filter($query) {

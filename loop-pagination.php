@@ -23,6 +23,7 @@
 	?>
 </nav>
 
+<!--
 <?php/*
 <nav class="pager">
 	<ul>
@@ -30,4 +31,4 @@
 		<li class="next"><?php next_posts_link('Next &rarr;', 0); ?></li>
 	</ul>
 </nav>
-*/?>
+*/?>-->

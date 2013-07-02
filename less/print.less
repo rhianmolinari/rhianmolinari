@@ -1,0 +1,32 @@
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+
+body {
+	color: @black;
+	background-color: @white;
+}
+.navbar-inner,
+.maincontent {
+	border: none;
+}
+header,
+footer,
+hr,
+button,
+input[type="submit"],
+input[type="reset"],
+.sidebar,
+#disqus_thread {
+	display: none !important;
+}
+.avatar {
+	border: none;
+}
+a:link[href^="http://"]:after,
+a[href^="http://"]:visited:after,
+a:link[href^="https://"]:after,
+a[href^="https://"]:visited:after {
+	content: " (" attr(href) ") ";
+	font-size: 11px;
+	color: @linkColorHover;
+}
