@@ -18,7 +18,10 @@ $(window).load(function() {
 		animationSpeed: 700,
 		keyboard: true,
 		pauseOnHover: true,
-		touch: true
+		touch: true,
+		start: function(slider) {
+			$('flexslider').removeClass('flex-loading');
+		}
 	});
 });
 $(document).ready(function() {

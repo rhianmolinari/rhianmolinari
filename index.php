@@ -17,7 +17,7 @@ get_header(); ?>
 				'order'=>'DESC')
 			); if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<?php $projeto = rwmb_meta( 'rw_slide_project' ); ?>
-			<div class="flexslider span8">
+			<div class="flexslider span8 flex-loading">
 				<ul class="slides">
 					<?php $pluploads = rwmb_meta( 'rw_project_plupload', 'type=plupload_image', $projeto );
 						if ( !empty($pluploads) ) :

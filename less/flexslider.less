@@ -3,24 +3,57 @@
 // --------------------------------------------------
 
 
+html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 1%;
+}
+.no-js .slides > li:first-child {
+	display: block;
+}
+
+.flex-loading {
+	min-height: 200px !important;
+	background-image: url("../img/loading.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
 .flexslider {
 	zoom: 1;
 	position: relative;
 	margin-bottom: 60px;
 	.user-select(none);
-	.slides {
-		zoom: 1;
-		> li {
-			list-style: none;
-			display: none;
-			-webkit-backface-visibility: hidden;
-			img {
-				display: block;
-				width: 100%;
+	a:focus,
+	a:active {
+		outline: none;
+	}
+	.flex-viewport {
+		max-height: 2000px;
+		.transition(all .3s ease-in-out);
+		.slides {
+			.clearfix();
+			zoom: 1;
+			> li {
+				list-style: none;
+				display: none;
+				-webkit-backface-visibility: hidden;
+				img {
+					display: block;
+					width: 100%;
+				}
+				&:first-child {
+					display: block;
+				}
 			}
 		}
 	}
 	.flex-control-nav {
+		// Reset
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
 		width: 100%;
 		position: absolute;
 		bottom: -45px;
@@ -36,7 +69,7 @@
 				height: 12px;
 				background-color: @navControlBackground;
 				border: @navControlBorder;
-				text-indent: -9999px;
+				text-indent: -9999em;
 				.border-radius(100%);
 				&:hover,
 				&:focus {
@@ -50,6 +83,10 @@
 		}
 	}
 	.flex-direction-nav {
+		// Reset
+		margin: 0;
+		padding: 0;
+		list-style: none;
 		a {
 			cursor: pointer;
 			display: block;
@@ -62,7 +99,7 @@
 			background-color: @navDirectionBackground;
 			position: absolute;
 			top: 50%;
-			text-indent: -9999px;
+			text-indent: -9999em;
 			.border-radius(100%);
 			.opacity(0);
 			.transition(all .3s ease-in-out);
@@ -74,6 +111,10 @@
 		.flex-next {
 			background-position: -447px -64px; //-456px -72px;
 			right: 10px;
+		}
+		.flex-disabled {
+			cursor: default;
+			.opacity(30);
 		}
 	}
 }

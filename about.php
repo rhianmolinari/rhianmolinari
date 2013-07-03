@@ -28,26 +28,6 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div>
-					<hr>
-					<div class="row plus">
-						<div class="span3">
-							<h4>Habilidades</h4>
-							<ul class="trace">
-								<li>Webdesign</li>
-								<li>Design de interface</li>
-								<li>Desenvolvimento Front-End</li>
-								<li><abbr title="User Experience">UX</abbr> Design</li>
-								<li>Responsive Web Design</li>
-							</ul>
-						</div>
-						<div class="span3">
-							<h4>Idiomas</h4>
-							<ul class="trace">
-								<li>Portugu&ecirc;s</li>
-								<li>Ingl&ecirc;s</li>
-							</ul>
-						</div>
-					</div>
 				</article>
 			</div>
 			<?php get_sidebar('aboutR'); ?>
