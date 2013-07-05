@@ -18,7 +18,7 @@ function rhianmolinari_projects() {
 	);
 	$args = array(
 		'labels' => $labels,
-		'hierarchical' => true,
+		'hierarchical' => false,
 		'description' => 'Portfolio Rhian Molinari',
 		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 		'taxonomies' => array( 'tipo_projeto' ),
@@ -32,7 +32,7 @@ function rhianmolinari_projects() {
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
-		'rewrite' => false,
+		'rewrite' => array( 'slug' => 'projeto', 'with_front' => false ),
 		'capability_type' => 'post'
 	);
 
@@ -77,7 +77,7 @@ function rhianmolinari_projects_taxonomies() {
 		'show_ui' => true,
 		'show_admin_column' => true,
 		'query_var' => true,
-		'rewrite' => array(	'slug' => 'projeto' )
+		'rewrite' => array(	'slug' => 'projetos' )
 	);
 
 	register_taxonomy( 'tipo_projeto', 'projeto', $args );
