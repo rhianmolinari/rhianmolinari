@@ -2,22 +2,20 @@
 // Flexslider
 // --------------------------------------------------
 
-
-html[xmlns] .slides {
-	display: block;
-}
-* html .slides {
-	height: 1%;
-}
 .no-js .slides > li:first-child {
 	display: block;
 }
 
 .flex-loading {
-	min-height: 200px !important;
+	min-height: 400px !important;
 	background-image: url("../img/loading.gif");
 	background-repeat: no-repeat;
 	background-position: center center;
+	.slides {
+		> li {
+			display: none;
+		}
+	}
 }
 .flexslider {
 	zoom: 1;
@@ -41,9 +39,6 @@ html[xmlns] .slides {
 				img {
 					display: block;
 					width: 100%;
-				}
-				&:first-child {
-					display: block;
 				}
 			}
 		}

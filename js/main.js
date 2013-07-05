@@ -20,7 +20,7 @@ $(window).load(function() {
 		pauseOnHover: true,
 		touch: true,
 		start: function(slider) {
-			$('flexslider').removeClass('flex-loading');
+			$('.flexslider').removeClass('flex-loading');
 		}
 	});
 });
