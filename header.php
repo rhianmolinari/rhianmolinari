@@ -16,7 +16,6 @@
 
 <!-- SEO -->
 <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>" />
-<meta property="og:url" content="<?php url_canonical(); ?>" />
 <meta property="og:locale" content="pt-BR" />
 <meta property="og:locale:alternate" content="pt-PT" />
 <meta property="og:locale:alternate" content="en-GB" />
@@ -29,8 +28,12 @@
 <meta property="og:description" content="<?php if(has_excerpt()) { echo strip_tags ( get_the_excerpt() ); } else { echo strip_tags ( excerpt(50) ); } ?>" />
 <meta property="og:type" content="article" />
 <meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) { echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } ?>" />
+<link rel="canonical" href="<?php the_permalink(); ?>"/>
+<meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php } else { ?>
 <meta property="og:image" content="<?php echo get_bloginfo('template_url') .'/img/logo.png'; ?>" />
+<link rel="canonical" href="<?php echo url_canonical(); ?>"/>
+<meta property="og:url" content="<?php echo url_canonical(); ?>" />
 <?php } ?>
 
 <?php if ( is_page() || is_home() ) { ?>
@@ -54,8 +57,6 @@
 <meta name="twitter:site" content="@rhianmolinari" />
 <meta name="twitter:creator" content="@rhianmolinari" />
 <meta name="twitter:title" content="<?php bloginfo('name'); ?>"/>
-
-<link rel="canonical" href="<?php url_canonical(); ?>"/>
 <!-- end SEO -->
 
 <!-- Icon -->
