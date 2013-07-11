@@ -78,6 +78,19 @@ function content($limit) {
 	return $content;
 }
 
+// Display the content page
+function content_page_id($id) {
+	$post = get_page($id);
+	$content = apply_filters( 'get_the_content', $post->post_content );
+	echo strip_tags($content);
+}
+
+// Print URL Canonical
+function url_canonical() {
+	$uri = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+	print('' . $uri . '');
+}
+
 // Disqus
 function disqus_embed($disqus_shortname) {
 	global $post;

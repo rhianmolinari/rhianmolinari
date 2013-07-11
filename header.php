@@ -16,27 +16,38 @@
 
 <!-- SEO -->
 <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>" />
-<meta property="og:url" content="<?php the_permalink(); ?>" />
+<meta property="og:url" content="<?php url_canonical(); ?>" />
 <meta property="og:locale" content="pt-BR" />
 <meta property="og:locale:alternate" content="pt-PT" />
 <meta property="og:locale:alternate" content="en-GB" />
 <meta property="og:locale:alternate" content="en-US" />
 <meta property="og:locale:alternate" content="fr-FR" />
 
-<!-- if page is content page -->
-<?php if (is_single()) { ?>
-<meta name="description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
-<meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+<?php if ( is_single() ) { ?>
+<!-- Meta Tags single -->
+<meta name="description" content="<?php if(has_excerpt()) { echo strip_tags ( get_the_excerpt() ); } else { echo strip_tags ( excerpt(50) ); } ?>" />
+<meta property="og:description" content="<?php if(has_excerpt()) { echo strip_tags ( get_the_excerpt() ); } else { echo strip_tags ( excerpt(50) ); } ?>" />
 <meta property="og:type" content="article" />
-<meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) {echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); }?>" />
-
-<!-- if page is others -->
+<meta property="og:image" content="<?php if (function_exists('wp_get_attachment_thumb_url')) { echo wp_get_attachment_thumb_url(get_post_thumbnail_id($post->ID)); } ?>" />
 <?php } else { ?>
-<meta name="description" content="<?php bloginfo('description'); ?>" />
+<meta property="og:image" content="<?php echo get_bloginfo('template_url') .'/img/logo.png'; ?>" />
+<?php } ?>
+
+<?php if ( is_page() || is_home() ) { ?>
+<!-- Meta Tags page and home -->
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <meta property="og:description" content="<?php bloginfo('description'); ?>" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="<?php bloginfo('template_url'); ?>/img/logo.png" />
+<?php } ?>
+
+<?php if ( is_page() ) { ?>
+<!-- Meta Tags page -->
+<meta name="description" content="<?php if(has_excerpt()) { echo strip_tags ( get_the_excerpt() ); } else { echo strip_tags ( excerpt(50) ); } ?>" />
+<?php } ?>
+
+<?php if ( is_home() ) { ?>
+<!-- Meta Tags home -->
+<meta name="description" content="<?php content_page_id(11); ?>" />
 <?php } ?>
 
 <meta name="twitter:card" content="summary" />
@@ -44,7 +55,7 @@
 <meta name="twitter:creator" content="@rhianmolinari" />
 <meta name="twitter:title" content="<?php bloginfo('name'); ?>"/>
 
-<link rel="canonical" href="<?php the_permalink(); ?>" />
+<link rel="canonical" href="<?php url_canonical(); ?>"/>
 <!-- end SEO -->
 
 <!-- Icon -->
