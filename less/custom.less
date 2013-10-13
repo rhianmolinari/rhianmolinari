@@ -264,14 +264,51 @@ hgroup {
 .sidebar {
 	> div {
 		margin-bottom: @gridGutterWidth * 2;
+		ul {
+			.cat-item {
+				> a {
+					text-transform: uppercase;
+					font-weight: bold;
+					border: none;
+					color: @black;
+					&:hover {
+						color: @linkColorHover;
+					}
+					&:active {
+						background-color: transparent;
+					}
+				}
+				> .children {
+					> .cat-item {
+						list-style-position: inside;
+						list-style-type: circle;
+						> a {
+							text-transform: inherit;
+							font-weight: normal;
+							color: @linkColor;
+							border-bottom: 1px dotted @gray9;
+							padding-bottom: 1px;
+							&:hover,
+							&:focus {
+								border-bottom-style: solid;
+								border-bottom-color: @linkColorLight;
+								color: @linkColorHover;
+							}
+							&:active {
+								background-color: @linkColorHover;
+								color: @white;
+								border-bottom-style: solid;
+								border-bottom-color: @linkColorLight;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 	.avatar {
 		margin-bottom: @gridGutterWidth;
 		.center-block();
-	}
-	li.categories {
-		padding-top: 0;
-		margin-bottom: 0;
 	}
 }
 // Sidebar experience

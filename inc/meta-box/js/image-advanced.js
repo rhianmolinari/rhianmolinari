@@ -56,7 +56,6 @@ jQuery( function( $ )
 				return $imageList.children( 'li#item_' + attachment.id ).length == 0;
 			} );
 			ids = _.pluck( selection, 'id' );
-			console.log( selection );
 
 			if( ids.length > 0 )
 			{
@@ -73,7 +72,11 @@ jQuery( function( $ )
 					if( r.success )
 					{
 						$imageList
-							.append( _.template( template, { attachments: selection } ) )
+							.append( _.template( template, { attachments: selection }, {
+								evaluate:    /<#([\s\S]+?)#>/g,
+								interpolate: /\{\{\{([\s\S]+?)\}\}\}/g,
+								escape:      /\{\{([^\}]+?)\}\}(?!\})/g
+							} ) )
 							.trigger('update.rwmbFile');
 					}
 				}, 'json' );

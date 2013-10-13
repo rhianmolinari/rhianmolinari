@@ -14,6 +14,21 @@
 <meta name="google-translate-customization" content="b756cbb921343aae-2432d119066f6109-g9dbccd7a23389ec0-15"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/bootstrap.less" type="text/less" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/responsive.less" type="text/less" />
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/print.less" type="text/less" media="print" />
+
+<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/less-1.3.3.min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js" type="text/javascript"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/main.js" type="text/javascript"></script>
+
 <!-- SEO -->
 <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?>" />
 <meta property="og:locale" content="pt-BR" />
@@ -74,22 +89,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_url'); ?>/img/apple/apple-touch-icon-ipad.png" />
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php bloginfo('template_url'); ?>/img/apple/apple-touch-icon-iphone-retina.png" />
 <!-- end Icon -->
-
-<title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo('name'); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/bootstrap.less" type="text/less" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/responsive.less" type="text/less" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/print.less" type="text/less" media="print" />
-
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/less-1.3.3.min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js" type="text/javascript"></script>
-<script src="<?php bloginfo('template_url'); ?>/js/main.js" type="text/javascript"></script>
-
 
 <?php wp_head(); ?>
 </head>

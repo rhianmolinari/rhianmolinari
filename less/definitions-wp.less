@@ -14,8 +14,9 @@
 	> ol,
 	> address,
 	> button,
-	> table {
-		margin-bottom: @baseLineHeight + 10;
+	> table,
+	> iframe {
+		margin-bottom: @baseLineHeight - 10;
 	}
 	> h1,
 	> h2,
@@ -24,6 +25,7 @@
 	> h5,
 	> h6 {
 		margin-bottom: @baseLineHeight - 5;
+		margin-top: @baseLineHeight + 15;
 	}
 	img {
 		margin-left: auto;
@@ -69,12 +71,12 @@
 		width: auto !important;
 		max-width: 100% !important;
 		background-color: @white;
-		margin-bottom: @baseLineHeight;
+		margin-bottom: @baseLineHeight - 10;
 		text-align: center;
 		border: none;
 		.clearfix();
 			> .wp-caption-text {
-				padding: @baseLineHeight / 2;
+				padding: (@baseLineHeight - 10) (@baseLineHeight - 12) 0 (@baseLineHeight - 12);
 				margin-bottom: 0 !important;
 				font-style: italic;
 				font-size: @baseFontSize - 1;
