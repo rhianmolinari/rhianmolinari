@@ -24,7 +24,7 @@ get_header(); ?>
 				endwhile; ?>
 				<?php get_template_part( 'loop', 'pagination' ); ?>
 			</div>
-			<?php get_sidebar(); ?>
+			<?php get_sidebar('taxonomy'); ?>
 		</div>
 	</div>
 </section>

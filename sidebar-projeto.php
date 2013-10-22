@@ -20,15 +20,30 @@
 	</div>
 	<?php endif; ?>
 
-	<?php $terms = get_the_terms( $post->ID, 'tipo_projeto' );
-	if ( !empty($terms) ) : ?>
-	<div><h3>Caracter&iacute;sticas do projeto</h3><ul>
-	<?php foreach ($terms as $term) {
-		echo '<li><a href="'.get_term_link($term->slug, 'tipo_projeto').'">'.$term->name.'</a></li>';
-	}
+	<?php 
+		global $post;
+		$taxonomy = 'tipo_projeto';
+
+		// get the term IDs assigned to post.
+		$post_terms = wp_get_object_terms( $post->ID, $taxonomy, array( 'fields' => 'ids' ) );
+
+		if ( !empty( $post_terms ) && !is_wp_error( $post_terms ) ) {
+		
+			echo '<div><h3>Caracter&iacute;sticas do projeto</h3><ul>';
+			$term_ids = implode( ',' , $post_terms );
+			$args = array(
+				'taxonomy' => $taxonomy,
+				'include' => $term_ids,
+				'title_li' => '', // Remove name category in title
+				//Add more arguments if you need them with a different value from default
+			);
+			$terms = wp_list_categories($args);
+
+			// display post categories
+			echo  $terms;
+			echo '</ul></div>';
+		}
 	?>
-	</ul></div>
-	<?php endif; ?>
 
 	<?php if ( !empty($client_info['url']) ) : ?>
 		<button class="span3" onclick="return !window.open('<?php echo $client_info['url']; ?>')">Visualizar Projeto</button>

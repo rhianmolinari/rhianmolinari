@@ -10,7 +10,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<hgroup class="span12">
-			<h2>Categoria</h2>
+			<h2>Tópico</h2>
 			<h3><?php single_cat_title(); ?> 
 				<?php if ( category_description() ) : ?>
 				<small><?php echo category_description(); ?></small>

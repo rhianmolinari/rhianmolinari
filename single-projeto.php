@@ -21,11 +21,13 @@ get_header(); ?>
 			<div class="span8">
 				<article>
 					<section>
-						<a href="<?php the_permalink(); ?>">
-							<h4><?php the_title(); ?></h4>
-						</a>
 						<?php if(has_excerpt()): ?>
-							<h3><?php echo get_the_excerpt(); ?></h3>
+							<hgroup>
+								<h2><?php the_title(); ?></h2>
+								<h3><?php echo get_the_excerpt(); ?></h3>
+							</hgroup>
+						<?php else: ?>
+							<h2><?php the_title(); ?></h2>
 						<?php endif; ?>
 						<div class="entry-content">
 							<?php the_content(); ?>

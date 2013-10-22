@@ -149,9 +149,13 @@
 				margin-bottom: 20px;
 				display: block;
 			}
-			time, .post-author, ul {
+			> time, > .post-author, > ul {
 				padding-right: 10px;
 			}
+		}
+		hgroup {
+			margin: 0;
+			text-align: left;
 		}
 	}
 }
@@ -264,51 +268,53 @@ hgroup {
 .sidebar {
 	> div {
 		margin-bottom: @gridGutterWidth * 2;
-		ul {
-			.cat-item {
-				> a {
-					text-transform: uppercase;
-					font-weight: bold;
-					border: none;
-					color: @black;
-					&:hover {
-						color: @linkColorHover;
-					}
-					&:active {
-						background-color: transparent;
-					}
-				}
-				> .children {
-					> .cat-item {
-						list-style-position: inside;
-						list-style-type: circle;
-						> a {
-							text-transform: inherit;
-							font-weight: normal;
-							color: @linkColor;
-							border-bottom: 1px dotted @gray9;
-							padding-bottom: 1px;
-							&:hover,
-							&:focus {
-								border-bottom-style: solid;
-								border-bottom-color: @linkColorLight;
-								color: @linkColorHover;
-							}
-							&:active {
-								background-color: @linkColorHover;
-								color: @white;
-								border-bottom-style: solid;
-								border-bottom-color: @linkColorLight;
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 	.avatar {
 		margin-bottom: @gridGutterWidth;
 		.center-block();
+	}
+}
+
+// Category and subcategory
+ul {
+	.cat-item {
+		> a {
+			text-transform: uppercase;
+			font-weight: bold;
+			border: 0;
+			color: @black;
+			&:hover {
+				color: @linkColorHover;
+			}
+			&:active {
+				background-color: transparent;
+			}
+		}
+		> .children {
+			> .cat-item {
+				list-style-position: inside;
+				list-style-type: circle;
+				> a {
+					text-transform: inherit;
+					font-weight: normal;
+					color: @linkColor;
+					border-bottom: 1px dotted @gray9;
+					padding-bottom: 1px;
+					&:hover,
+					&:focus {
+						border-bottom-style: solid;
+						border-bottom-color: @linkColorLight;
+						color: @linkColorHover;
+					}
+					&:active {
+						background-color: @linkColorHover;
+						color: @white;
+						border-bottom-style: solid;
+						border-bottom-color: @linkColorLight;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -369,7 +375,6 @@ h6,
 p,
 .meta small,
 footer ul li,
-.meta ul li,
 aside ul li,
 .breadcrumb,
 caption {
