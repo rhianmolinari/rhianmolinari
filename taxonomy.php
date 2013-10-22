@@ -10,7 +10,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<hgroup class="span12">
-			<h2>Projetos</h2>
+			<h2>Projetos de</h2>
 			<h3><?php single_cat_title(); ?></h3>
 		</hgroup>
 	</div>

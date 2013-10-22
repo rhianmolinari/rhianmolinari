@@ -13,7 +13,7 @@
 	} ?>
 	<section>
 		<a href="<?php the_permalink(); ?>">
-			<h4><?php the_title(); ?></h4>
+			<h2><?php the_title(); ?></h2>
 		</a>
 		<?php if(has_excerpt()): ?>
 			<h3><?php echo get_the_excerpt(); ?></h3>
