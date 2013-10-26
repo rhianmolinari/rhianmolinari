@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/responsive.less" type="text/less" />
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/less/print.less" type="text/less" media="print" />
 
-<script src="<?php bloginfo('template_url'); ?>/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/less-1.3.3.min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js" type="text/javascript"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js" type="text/javascript"></script>
