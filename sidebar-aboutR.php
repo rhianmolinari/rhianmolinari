@@ -6,7 +6,7 @@
  */
 ?>
 
-<aside class="sidebar span3 offset1 experience">
+<aside class="sidebar span3 offset1">
 	<div>
 		<h3>Idiomas</h3>
 		<ul class="trace">

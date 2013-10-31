@@ -167,6 +167,60 @@
 	border: none;
 }
 
+// Share button
+@twitter: #39a9e0;
+@facebook: #3b5998;
+@gplus: #dd4b39;
+
+[class^="iconshare-"],
+[class*=" iconshare-"] {
+	display: inline-block;
+	width: 25px;
+	height: 34px; //16
+	.ie7-restore-right-whitespace();
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("../img/share.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 8px;
+	top: 0;
+	border-right-style: solid;
+	border-right-width: 1px;
+	padding-right: 4px;
+}
+.iconshare-twitter		{ background-position: -6px 0; border-right-color: darken(@twitter, 6%); }
+.iconshare-facebook		{ background-position: -43px -3px; border-right-color: darken(@facebook, 6%); }
+.iconshare-gplus		{ background-position: -80px 0; border-right-color: darken(@gplus, 6%); }
+
+.shared {
+	> a {
+		color: @white;
+		.border-radius(@inputBorderRadius);
+		display: inline-block;
+		padding: 7px 10px 7px 50px;
+		position: relative;
+	}
+	> .twitter {
+		background-color: @twitter;
+		&:active {
+			.box-shadow(inset 0 0 5px darken(@twitter, 30%));
+		}
+	}
+	> .facebook {
+		background-color: @facebook;
+		&:active {
+			.box-shadow(inset 0 0 5px darken(@facebook, 30%));
+		}
+	}
+	> .gplus {
+		background-color: @gplus;
+		&:active {
+			.box-shadow(inset 0 0 5px darken(@gplus, 30%));
+		}
+	}
+}
+
 // Author
 #author-bio {
 	.clearfix();
@@ -318,21 +372,6 @@ ul {
 	}
 }
 
-// Sidebar experience
-.experience {
-	> ul {
-		> li {
-			padding-top: 15px;
-			margin-bottom: 15px;
-			> strong,
-			> p {
-				margin: 0;
-				display: block;
-			}
-		}
-	}
-}
-
 // Tagcloud
 .tagcloud {
 	> a {
@@ -377,7 +416,8 @@ p,
 footer ul li,
 aside ul li,
 .breadcrumb,
-caption {
+caption,
+#author-bio {
 	a {
 		border-bottom: 1px dotted @gray9;
 		padding-bottom: 1px;

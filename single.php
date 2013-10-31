@@ -84,17 +84,12 @@ get_header(); ?>
 								<?php endif; ?>
 							</div>
 
-							<ul>
-								<li>
-									<a target="_blank" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>&via=rhianmolinari">Share on Twitter</a>
+							<div class="shared">
+								<a class="twitter" href="javascript:void(0);" onclick="popup('https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>&via=rhianmolinari', '<?php the_title(); ?>');"><span class="iconshare-twitter"></span>Tweet</a>
+								<a class="facebook" href="javascript:void(0);" onclick="popup('http://www.facebook.com/sharer.php?s=100&p[url]=<?php the_permalink(); ?><?php if ( '' != get_the_post_thumbnail() )?>&p[images][0]=<?php {echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );} ?>&p[title]=<?php the_title(); ?>&p[summary]=<?php if(has_excerpt()) { echo get_the_excerpt(); } else { echo excerpt(25); } ?>', '<?php the_title(); ?>');"><span class="iconshare-facebook"></span>Like</a>
+								<a class="gplus" href="javascript:void(0);" onclick="popup('https://plus.google.com/share?url=<?php the_permalink(); ?>', '<?php the_title(); ?>');"><span class="iconshare-gplus"></span>Share</a>
 								</li>
-								<li>
-									<a target="_blank" href="http://www.facebook.com/sharer.php?s=100&p[url]=<?php the_permalink(); ?><?php if ( '' != get_the_post_thumbnail() )?>&p[images][0]=<?php {echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) );} ?>&p[title]=<?php the_title(); ?>&p[summary]=<?php if(has_excerpt()) { echo get_the_excerpt(); } else { echo excerpt(25); } ?>">Share on Facebook</a>
-								</li>
-								<li>
-									<a target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=pt-br‎&url=<?php the_permalink(); ?>">Share on Google+</a>
-								</li>
-							</ul>
+							</div>
 
 							<div id="author-bio">
 								<?php echo get_avatar ( get_the_author_meta('user_email'), 100 ); ?>

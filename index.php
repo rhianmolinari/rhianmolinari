@@ -65,7 +65,7 @@ get_header(); ?>
 		<hr>
 		<hgroup>
 			<h2>O processo</h2>
-			<h3>Este &eacute; a estrutura do desenvolvimento dos projetos web e mobile.</h3>
+			<h3>Est&aacute; &eacute; uma estrutura gen&eacute;rica de desenvolvimento web e mobile.</h3>
 		</hgroup>
 		<ul class="row process">
 			<li class="span3">

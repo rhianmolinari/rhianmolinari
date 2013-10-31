@@ -85,7 +85,7 @@
 					</p>
 					<?php if ( get_the_author_meta( 'phone' ) ): ?>
 					<p>
-						<a href="tel:+number"><?php the_author_meta( 'phone', 1 ); ?></a>
+						<a href="tel:<?php the_author_meta( 'phone', 1 ); ?>"><?php the_author_meta( 'phone', 1 ); ?></a>
 					</p>
 					<?php endif; ?>
 				</div>
