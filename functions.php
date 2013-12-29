@@ -115,7 +115,7 @@ function disqus_embed($disqus_shortname) {
 
 // Custom Login
 function custom_login_logo() {
-	echo '<style type="text/css">div#login h1 a { background-image: url('.get_bloginfo('template_directory').'/img/logo.png) !important; background-size: auto !important; }</style>';
+	echo '<style type="text/css">div#login h1 a { background-image: url('.get_bloginfo('template_directory').'/img/logo.png) !important; background-size: auto !important; margin: 0 auto; width: auto; }</style>';
 }
 add_action( 'login_head', 'custom_login_logo' );
 

@@ -27,6 +27,7 @@ function rhianmolinari_projects() {
 		'show_in_menu' => true,
 		'show_in_nav_menus' => true,
 		'menu_position' => 5,
+		'menu_icon' => get_bloginfo('template_url').'/img/icon-project.png',
 		'publicly_queryable' => true,
 		'exclude_from_search' => false,
 		'has_archive' => true,
@@ -39,22 +40,6 @@ function rhianmolinari_projects() {
 	register_post_type( 'projeto', $args );
 }
 add_action( 'init', 'rhianmolinari_projects' );
-
-// Custom Icon Post Type
-function rhianmolinari_projects_icon() { ?>
-<style type="text/css" media="screen">
-	#menu-posts-projeto .wp-menu-image {
-		background: url(<?php bloginfo('template_url') ?>/img/custom_types_icon.png) no-repeat -30px -2px !important;
-	}
-	#menu-posts-projeto:hover .wp-menu-image, #menu-posts-projeto.wp-has-current-submenu .wp-menu-image {
-		background-position: -51px -2px !important;
-	}
-	#icon-edit.icon32-posts-projeto {
-		background: url(<?php bloginfo('template_url') ?>/img/custom_types_icon.png) no-repeat 6px 4px;
-	}
-</style>
-<?php }
-add_action( 'admin_head', 'rhianmolinari_projects_icon' );
 
 // Taxonomies
 function rhianmolinari_projects_taxonomies() {
@@ -110,6 +95,7 @@ function rhianmolinari_slide() {
 		'show_in_menu' => true,
 		'show_in_nav_menus' => true,
 		'menu_position' => 5,
+		'menu_icon' => get_bloginfo('template_url').'/img/icon-slide.png',
 		'publicly_queryable' => true,
 		'exclude_from_search' => true,
 		'has_archive' => false,
