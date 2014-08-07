@@ -156,7 +156,5 @@ require_once('includes/custom_user.php');
 require_once('includes/breadcrumb.php');
 require_once('includes/custom_types.php');
 require_once('includes/metabox.php');
-require_once('includes/shortcode.php');
-require_once('includes/tinymce/tinymce.php');
 
 ?>
